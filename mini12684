@@ -17,3 +17,7 @@ gcode:
     SET_PIN PIN=BEEPER_pin VALUE={S} CYCLE_TIME={ 1.0/S if S > 0 else 1 }
     G4 P{P}
     SET_PIN PIN=BEEPER_pin VALUE=0
+
+NOT RELATED 
+
+is_non_critical: True
