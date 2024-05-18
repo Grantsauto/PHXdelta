@@ -32,3 +32,23 @@ holding_torque: 0.4
 max_current: 1.7
 # Steps per revolution (1.8deg motors use 200, 0.9deg motors use 400)
 steps_per_revolution: 200
+
+PID_V STUFF
+#*#
+#*# [extruder]
+#*# pid_version = 1
+#*# pid_target = 245.00
+#*# pid_tolerance = 0.0200
+#*# control = pid_v
+#*# pid_kp = 22.079
+#*# pid_ki = 1.181
+#*# pid_kd = 103.217
+#*#
+#*# [heater_bed]
+#*# pid_version = 1
+#*# pid_target = 70.00
+#*# pid_tolerance = 0.0200
+#*# control = pid
+#*# pid_kp = 73.808
+#*# pid_ki = 1.430
+#*# pid_kd = 952.118
