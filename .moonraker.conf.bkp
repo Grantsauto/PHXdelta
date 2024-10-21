@@ -129,3 +129,19 @@ channel = stable
 repo = fluidd-core/fluidd
 path = ~/fluidd
 
+[update_manager mmms]
+type = git_repo
+path = ~/3MS
+origin = https://github.com/3DCoded/3MS.git
+primary_branch = main
+is_system_service = False
+install_script = install.sh
+
+[update_manager DynamicMacros]
+type = git_repo
+path = ~/DynamicMacros
+origin = https://github.com/3DCoded/DynamicMacros.git
+primary_branch = main
+is_system_service = False
+install_script = install.sh
+
