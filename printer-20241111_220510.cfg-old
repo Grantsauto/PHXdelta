@@ -1,7 +1,5 @@
-[include mmu/optional/client_macros.cfg]
-[include mmu/addons/blobifier.cfg]
 [include mmu/base/*.cfg]
-#[include mmu/optional/mmu_ercf_compat.cfg]
+[include mmu/optional/mmu_ercf_compat.cfg]
 [include mmu/optional/mmu_menu.cfg]
 [include fluidd.cfg]
 # This file contains common pin mappings for the BIGTREETECH SKR mini
@@ -226,7 +224,6 @@ endstop_align_zero: False
 step_pin: PB3
 dir_pin: !PB4
 enable_pin: !PD2
-endstop_pin: tmc2209_extruder:virtual_endstop
 microsteps: 16
 rotation_distance: 22.452 #for 5mm Shaft Driven Bondtech gearsets
 gear_ratio: 50:8 #for sherpa mini 8t motor
@@ -270,8 +267,6 @@ driver_TBL: 0
 driver_TOFF: 4
 driver_HEND: 6
 driver_HSTRT: 7
-diag_pin: ^PC15		# Set to MCU pin connected to TMC DIAG pin for extruder
-driver_SGTHRS: 100		# 255 is most sensitive value, 0 is least sensitive
 
 # [filament_switch_sensor filament_sensor]
 # switch_pin: ^mmu: PC15

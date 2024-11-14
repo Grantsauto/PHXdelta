@@ -1,8 +1,3 @@
-[include mmu/optional/client_macros.cfg]
-[include mmu/addons/blobifier.cfg]
-[include mmu/base/*.cfg]
-#[include mmu/optional/mmu_ercf_compat.cfg]
-[include mmu/optional/mmu_menu.cfg]
 [include fluidd.cfg]
 # This file contains common pin mappings for the BIGTREETECH SKR mini
 # E3 v2.0. To use this config, the firmware should be compiled for the
@@ -24,7 +19,7 @@
 [include config_backup.cfg]
 [include extras/*.cfg]
 [include my_macros/*.cfg]
-#[include 3ms/main.cfg] 
+[include 3ms/main.cfg] 
 
 [dynamicmacros]
 #config_path: ~/printer_data/config # If you left your printer configuration path as the default, you don't need to specify this
@@ -226,7 +221,6 @@ endstop_align_zero: False
 step_pin: PB3
 dir_pin: !PB4
 enable_pin: !PD2
-endstop_pin: tmc2209_extruder:virtual_endstop
 microsteps: 16
 rotation_distance: 22.452 #for 5mm Shaft Driven Bondtech gearsets
 gear_ratio: 50:8 #for sherpa mini 8t motor
@@ -270,14 +264,12 @@ driver_TBL: 0
 driver_TOFF: 4
 driver_HEND: 6
 driver_HSTRT: 7
-diag_pin: ^PC15		# Set to MCU pin connected to TMC DIAG pin for extruder
-driver_SGTHRS: 100		# 255 is most sensitive value, 0 is least sensitive
 
-# [filament_switch_sensor filament_sensor]
-# switch_pin: ^mmu: PC15
-# pause_on_runout: TRUE
-# event_delay: 3.0
-# pause_delay: 1.5
+[filament_switch_sensor filament_sensor]
+switch_pin: ^3ms: PC15
+pause_on_runout: TRUE
+event_delay: 3.0
+pause_delay: 1.5
 
 #####################################################################
 ####firmware_retraction####
@@ -355,9 +347,9 @@ sensor_mcu: expander
 min_temp: 0
 max_temp: 100
 
-[temperature_sensor mmu]
+[temperature_sensor 3ms]
 sensor_type: temperature_mcu
-sensor_mcu: mmu
+sensor_mcu: 3ms
 min_temp: 0
 max_temp: 100
 
