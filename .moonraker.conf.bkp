@@ -129,14 +129,6 @@ channel = stable
 repo = fluidd-core/fluidd
 path = ~/fluidd
 
-[update_manager mmms]
-type = git_repo
-path = ~/3MS
-origin = https://github.com/3DCoded/3MS.git
-primary_branch = main
-is_system_service = False
-install_script = install.sh
-
 [update_manager happy-hare]
 type = git_repo
 path = ~/Happy-Hare
